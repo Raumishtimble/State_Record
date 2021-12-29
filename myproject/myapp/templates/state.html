@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+  <div class="form-group d-flex">
+    <div class="w-50 mx-4">
+      <select class="form-select" onchange="getState()" id="state">
+        <option value="">Select state</option>
+        {% for i in state %}
+        <option value="{{i.name}}">{{i.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="w-50 mx-4">
+      <select class="form-select" id="subject" onchange="getAvrage()">
+        <option value="">Select Subject</option>
+      </select>
+    </div>
+  </div>
+  <label id="disstate"></label>
+  <label id="avg"></label><br/>
+  <label id="disavgall"></label>
+  <label id="avg1"></label>
+</div>
+{% endblock %}
