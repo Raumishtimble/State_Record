@@ -1,0 +1,2 @@
+Need to install emport_export library
+pip install django-import-export
